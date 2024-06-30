@@ -31,6 +31,7 @@ function validate(guess) {
         if (numGuess == 10) {
             displayGuess(guess);
             displayMessage(`Game Over. Random Number was ${randomNumber} `);
+            alert(`Game Over. Random Number was ${randomNumber} `);
             endGame();
         }
         else {
@@ -43,6 +44,7 @@ function validate(guess) {
 function CheckGuess(guess) {
     if (guess == randomNumber) {
         displayMessage(`Hurrah !!! You guessed the right number. You Won `);
+        alert(`Hurrah !!! You guessed the right number. You Won `)
         endGame();
     }
     else if (guess < randomNumber) {
@@ -67,7 +69,6 @@ function displayMessage(message) {
 }
 
 function endGame() {
-    alert(`Game Over!!! Random Number was ${randomNumber} `)
     playGame = false;
 
     submit.setAttribute("disabled", "");
