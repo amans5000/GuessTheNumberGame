@@ -90,7 +90,6 @@ function endGame() {
 
     submit.replaceWith(button);
     button.addEventListener("click", function startNewGame() {
-        console.log("HEllo");
         button.replaceWith(submit);
         submit.removeAttribute("disabled", "");
         userInput.removeAttribute("disabled", "");
